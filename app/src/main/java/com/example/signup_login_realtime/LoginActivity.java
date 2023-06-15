@@ -129,10 +129,19 @@ public class LoginActivity extends AppCompatActivity {
                 if (snapshot.exists()) {
                     loginTelepon.setError(null);
                     String passwordFromDB = snapshot.child(userTelepon).child("password").getValue(String.class);
+                    String nameFromDB = snapshot.child(userTelepon).child("name").getValue(String.class);
+                    String emailFromDB = snapshot.child(userTelepon).child("email").getValue(String.class);
+                    String usernameFromDB = snapshot.child(userTelepon).child("username").getValue(String.class);
 
                     if (passwordFromDB != null && passwordFromDB.equals(userPassword)) {
                         loginPassword.setError(null);
                         Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+
+                        intent.putExtra("name", nameFromDB);
+                        intent.putExtra("email", emailFromDB);
+                        intent.putExtra("username", usernameFromDB);
+                        intent.putExtra("password", passwordFromDB);
+
                         startActivity(intent);
                         finish();
                     } else {
