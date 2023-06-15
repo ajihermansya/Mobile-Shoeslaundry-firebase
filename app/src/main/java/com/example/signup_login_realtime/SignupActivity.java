@@ -68,7 +68,10 @@ public class SignupActivity extends AppCompatActivity {
                     reference = database.getReference("users");
 
                     HelperClass helperClass = new HelperClass(name, email, username, password, telepon);
+
+                    //data untuk mengambil PK user, username bisa kita ganti namun masuk tetap no telepon ya
                     reference.child(telepon).setValue(helperClass);
+
 
                     Toast.makeText(SignupActivity.this, "You have signed up successfully", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
