@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -129,9 +130,9 @@ public class LoginActivity extends AppCompatActivity {
                     loginTelepon.setError(null);
                     String passwordFromDB = snapshot.child(userTelepon).child("password").getValue(String.class);
 
-                    if (Objects.equals(passwordFromDB, userPassword)) {
+                    if (passwordFromDB != null && passwordFromDB.equals(userPassword)) {
                         loginPassword.setError(null);
-                        Intent intent = new Intent(LoginActivity.this, PrifiletwoActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
@@ -146,8 +147,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(LoginActivity.this, "Database Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 }
