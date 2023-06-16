@@ -126,9 +126,12 @@ public class SignupActivity extends AppCompatActivity {
         return password.matches(regex);
     }
 
-    public boolean isValidname(String password) {
-        String regex = "^[a-zA-Z]+$";
-        return password.matches(regex);
+    public boolean isValidname(String name) {
+        if (name.length() < 5 || name.length() >= 27) {
+            return false;
+        }
+        String regex = "^[a-zA-Z ]+$";
+        return name.matches(regex);
     }
 
     public boolean isValidphone(String telepon) {

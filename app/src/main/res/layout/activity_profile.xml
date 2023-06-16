@@ -71,24 +71,24 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                android:padding="8dp"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/postvoucer"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/postvoucer"
-                    android:text="27"
                     android:gravity="center"
+                    android:text="27"
                     android:textAlignment="center"
                     android:textColor="@color/lavender"
                     android:textSize="26sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/voucer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/voucer"
                     android:text="Voucher"
                     android:textAlignment="center"
                     android:textColor="@color/text_style"
@@ -225,9 +225,6 @@
                 android:textAlignment="viewEnd"
                 android:textColor="@color/grey"
                 android:textSize="18sp"/>
-
-
-
 
         </LinearLayout>
 
