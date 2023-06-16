@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fixpage"
@@ -12,7 +17,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/akwhitelogo"
+        android:src="@drawable/mypick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +39,7 @@
         android:id="@+id/titleUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="username"
+        android:text="welcome back, shoes laundry!"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/titleName"
@@ -72,7 +77,7 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/postsNumber"
+                    android:id="@+id/postvoucer"
                     android:text="27"
                     android:gravity="center"
                     android:textAlignment="center"
@@ -83,10 +88,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/posts"
-                    android:text="Post"
+                    android:id="@+id/voucer"
+                    android:text="Voucher"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/text_style"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -104,7 +109,7 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/followersNo"
+                    android:id="@+id/postlike"
                     android:text="198"
                     android:gravity="center"
                     android:textAlignment="center"
@@ -115,10 +120,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/followers"
-                    android:text="Followers"
+                    android:id="@+id/likes"
+                    android:text="My Likes"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/text_style"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -134,7 +139,7 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/followingNo"
+                    android:id="@+id/postrating"
                     android:text="237"
                     android:gravity="center"
                     android:textAlignment="center"
@@ -145,10 +150,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/following"
-                    android:text="Following"
+                    android:id="@+id/rating"
+                    android:text="My Rating"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/text_style"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -163,7 +168,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -186,6 +191,44 @@
                     android:textColor="@color/grey"
                     android:textSize="18sp"/>
 
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titlename1"
+                android:layout_weight="1"
+                android:text="Username"
+                android:textStyle="bold"
+                android:textColor="@color/lavender"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleName1"
+                android:text="user_name"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/grey"
+                android:textSize="18sp"/>
+
+
+
+
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -199,7 +242,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:padding="8dp"
+            android:padding="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -207,7 +250,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/email"
                 android:layout_weight="1"
-                android:text="Name"
+                android:text="Email"
                 android:textStyle="bold"
                 android:textColor="@color/lavender"
                 android:textSize="18sp"/>
@@ -236,16 +279,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:padding="8dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/username"
+                android:id="@+id/telepon"
                 android:layout_weight="1"
-                android:text="Username"
+                android:text="Telepon"
                 android:textStyle="bold"
                 android:textColor="@color/lavender"
                 android:textSize="18sp"/>
@@ -253,8 +296,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/profileUsername"
-                android:text="username"
+                android:id="@+id/profileTelepon"
+                android:text="telepon"
                 android:layout_weight="1"
                 android:textAlignment="viewEnd"
                 android:textColor="@color/grey"
@@ -270,33 +313,21 @@
             android:background="@color/lavender"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="329dp"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:padding="8dp"
-            android:orientation="horizontal">
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
             <TextView
+                android:id="@+id/changePassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/password"
                 android:layout_weight="1"
-                android:text="Password"
-                android:textStyle="bold"
-                android:textColor="@color/lavender"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/profilePassword"
-                android:text="password"
-                android:layout_weight="1"
+                android:text="change password ?"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/grey"
-                android:textSize="18sp"/>
-
-
+                android:textColor="@color/text_style"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -305,16 +336,17 @@
     <Button
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/editButton"
         android:gravity="center"
         android:text="Edit Profile"
         android:textSize="18sp"
-        app:cornerRadius = "20dp"
+        app:cornerRadius = "15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

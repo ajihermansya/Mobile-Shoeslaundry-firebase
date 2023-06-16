@@ -130,6 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                     loginTelepon.setError(null);
                     String passwordFromDB = snapshot.child(userTelepon).child("password").getValue(String.class);
                     String nameFromDB = snapshot.child(userTelepon).child("name").getValue(String.class);
+                    String teleponFromDB = snapshot.child(userTelepon).child("telepon").getValue(String.class);
                     String emailFromDB = snapshot.child(userTelepon).child("email").getValue(String.class);
                     String usernameFromDB = snapshot.child(userTelepon).child("username").getValue(String.class);
 
@@ -138,6 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
 
                         intent.putExtra("name", nameFromDB);
+                        intent.putExtra("telepon", teleponFromDB);
                         intent.putExtra("email", emailFromDB);
                         intent.putExtra("username", usernameFromDB);
                         intent.putExtra("password", passwordFromDB);
